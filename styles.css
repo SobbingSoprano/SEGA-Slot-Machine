@@ -1,0 +1,242 @@
+/* Remove default margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* styling for 'navbar' */
+.header{
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    padding: 2%;
+    align-items: center;
+}
+/* Styling for the webpage title */
+h1 {
+    font-family: "Audiowide";
+    font-size: 30px;
+    color: blue;
+}
+/* Styling for the webpage title */
+.slots {
+    font-family: "Monoton";
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: gold;
+    transition: all 0.4s ease-in-out;
+}
+/* Contains default styling for the body */
+#homepage {
+    background-image: url("Assets/Images/sega_background.PNG");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 700px;
+    transition: background-image 0.6s ease-in-out;
+}
+/* Contains Audio Player */
+#audio-container {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    transition: background-color 2s ease-in-out;
+}
+/* Div element containing all the character selections */
+.columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    padding: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 60px;
+}
+/* Contains character card and select button */
+.character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+/* contains character card ONLY */
+.character-slot {
+    border-radius: 4px;
+    width: 200px;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+/* Character image in character card */
+.character-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+/* contains default styling for character names */
+.character-name {
+    margin-top: 60px;
+    font-size: 40px;
+    font-family: 'Audiowide';
+    transition: all 0.5s ease-in-out;
+    letter-spacing: 3px;
+}
+/* Contains default styling for select button */
+.selectButton {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #333;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.selectButton a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Audiowide';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/* Styling for select button when being hovered over */
+.selectButton:hover {
+    background-color: white;
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+/* Default photo for each character card */
+#Sonic-profile{
+    background-image: url("Assets/Images/sonic.PNG");
+}
+#Tails-profile{
+    background-image: url("Assets/Images/tails.PNG");
+}
+#Amy-profile{
+    background-image: url("Assets/Images/amy.PNG");
+}
+/* default styling for Sonic's character card */
+#Sonic {
+    background-color: rgb(14, 14, 199);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+/* When the Sonic's select button is hovered over, his character card is slightly rotated, enlarged, and stylized */
+.character-container:has(.sonic-button:hover) #Sonic{
+    border-radius: 15px;
+    box-shadow: 8px 4px rgb(14, 14, 199);
+    transform: scale(1.02);
+    transform: rotate(4deg);
+    background-color: white;
+}
+/* When the Sonic's select button is hovered over, his character image is changed */
+.character-container:has(.sonic-button:hover) #Sonic-profile{
+    background-image: url('Assets/Images/sonic(3).PNG');
+}
+/* changes color of character image border on hover */
+.character-container:has(.sonic-button:hover) #Sonic .character-image{
+    border:3px solid rgb(14, 14, 199);
+}
+/* changes font of character name, color, and spacing on hover */
+.character-container:has(.sonic-button:hover) #S{
+    font-family: 'Orbitron';
+    letter-spacing: 0px;
+    color: rgb(14, 14, 199);
+}
+/* changes anchor's color on hover */
+.sonic-button:hover a{
+    color: rgb(14, 14, 199);
+}
+/* changes background image of the entire page to sonic when his select button is hovered over */
+#homepage:has(.sonic-button:hover) {
+    background-image: url("Assets/Images/sonic_background.JPG");
+}
+/* default styling for Tails's character card */
+#Tails {
+    background-color: rgb(252, 188, 69);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+/* When the Tails's select button is hovered over, his character card is slightly rotated, enlarged, and stylized */
+.character-container:has(.tails-button:hover) #Tails{
+    border-radius: 15px;
+    box-shadow: 8px 4px rgb(252, 188, 69);
+    transform: scale(1.02);
+    transform: rotate(-3deg);
+    background-color: white;
+}
+/* When the Tails's select button is hovered over, his character image is changed*/
+.character-container:has(.tails-button:hover) #Tails-profile {
+    background-image: url('Assets/Images/tails(4).PNG');
+}
+/* changes color of character image border on hover */
+.character-container:has(.tails-button:hover) #Tails .character-image {
+    border:3px solid rgb(252, 188, 69);
+}
+/* changes font of character name, color, and spacing on hover */
+.character-container:has(.tails-button:hover) #T {
+    font-family: 'Comfortaa';
+    letter-spacing: 0px;
+    color: rgb(252, 188, 69);
+}
+/* changes anchor's color on hover */
+.tails-button:hover a{
+    color: rgb(252, 188, 69);
+}
+/* changes background image of the entire page to tails when his select button is hovered over */
+#homepage:has(.tails-button:hover) {
+    background-image: url("Assets/Images/tails_background.JPG");
+}
+/* default styling for Amy's character card */
+#Amy {
+    background-color: rgb(240, 133, 151);
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+}
+/* When the Amy's select button is hovered over, her character card is slightly rotated, enlarged, and stylized */
+.character-container:has(.amy-button:hover) #Amy{
+    border-radius: 15px;
+    box-shadow: 8px 4px rgb(240, 133, 151);
+    transform: scale(1.02);
+    transform: rotate(2deg);
+    background-color: white;
+}
+/* When the Amy's select button is hovered over, her character image is changed */
+.character-container:has(.amy-button:hover) #Amy-profile {
+    background-image: url('Assets/Images/amy(2).PNG');
+}
+/* changes color of character image border on hover */
+.character-container:has(.amy-button:hover) #Amy .character-image {
+    border:3px solid rgb(240, 133, 151);
+}
+/* changes font of character name, color, and spacing on hover */
+.character-container:has(.amy-button:hover) #A {
+    font-family: 'Pacifico';
+    letter-spacing: 0px;
+    color: rgb(240, 133, 151);
+}
+/* changes anchor's color on hover */
+.amy-button:hover a{
+    color: rgb(240, 133, 151);
+}
+/* changes background image of the entire page to amy when her select button is hovered over */
+#homepage:has(.amy-button:hover) {
+    background-image: url("Assets/Images/amy_background.JPG");
+}
