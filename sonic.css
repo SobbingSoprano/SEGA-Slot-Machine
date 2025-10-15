@@ -22,7 +22,10 @@ h1 {
   text-shadow: 0 0 10px blue;
   margin-bottom: 40px;
 }
-
+.slot-frame, .slot-bg {
+  width: 350px;
+  height: 450px;
+}
 /* Slot machine container */
 .slot-machine {
   background-image: url("Assets/Images/slotmachine_base.png");  
