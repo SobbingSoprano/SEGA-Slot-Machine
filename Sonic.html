@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="sonic.css">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Sonic</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+         <h1>Sonic’s Slot Machine</h1>
+
+  <div class="slot-wrapper">
+    <!-- Background layer: animated or static JPEG -->
+    <img src="Assets/Images/slotmachine_base.jpg" class="slot-bg" alt="Slot machine background">
+
+    <!-- Foreground layer: transparent PNG frame -->
+    <img src="Assets/Images/slotmachine_base.png" class="slot-frame" alt="Slot machine frame">
+
+    <!-- Reel section goes in the middle -->
+    <div class="reel-container">
+      <div class="reel">⭐</div>
+      <div class="reel">💎</div>
+      <div class="reel">🎲</div>
+    </div>
+  </div>
+
+  <button class="spin-button">SPIN</button>
+  <a href="index.html" class="back-link">← Back to Main Menu</a>
     </body>
 </html>

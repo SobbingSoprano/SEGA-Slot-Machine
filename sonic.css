@@ -1,0 +1,86 @@
+/* sonic.css */
+/* Reset and background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Audiowide', sans-serif;
+  background-image: url("Assets/Images/sonic_background.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main title */
+h1 {
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 10px blue;
+  margin-bottom: 40px;
+}
+
+/* Slot machine container */
+.slot-machine {
+  background-image: url("Assets/Images/slotmachine_base.png");  
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(14, 14, 199, 0.6);
+}
+
+/* Slot “reels” */
+.reel {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 3px solid blue;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: blue;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Spin button */
+.spin-button {
+  margin-top: 40px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.spin-button:hover {
+  background-color: white;
+  color: blue;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px blue;
+}
+
+/* Back link */
+a.back-link {
+  margin-top: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a.back-link:hover {
+  color: gold;
+}
