@@ -17,7 +17,7 @@ body {
 
 /* Main title */
 h1 {
-  color: white;
+  color: white;++
   font-size: 40px;
   text-shadow: 0 0 10px blue;
   margin-bottom: 40px;
@@ -40,19 +40,36 @@ h1 {
 
 /* Slot “reels” */
 .reel {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border: 3px solid blue;
-  border-radius: 10px;
+  width: 29px;
+  height: 50px;
+  background-image: url("Assets/Images/sonic-sprites.gif");
+  background-repeat: no-repeat;
+  background-size: 1000px 500px;
+  background-color: rgba(225, 225, 225, 0.5);
+  border: 5px solid blue;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: blue;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-position: -1000px -10px;
 }
+
+.sonic1 { background-position: 0 0; }          /* 1st frame */
+.sonic2 { background-position: -100px 0; }     /* 2nd frame */
+.sonic3 { background-position: -200px 0; }     /* 3rd frame */
+
+/* The reel container (the slot area) */
+.reel-container {
+  position: absolute;
+  top: 39.10%;                  /* move up/down — tweak until aligned with the machine window */
+  left: 49.44%;                 /* center horizontally */
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5.8px;                 /* space between reels */
+  z-index: 0;                /* under the machine frame if needed */
+}
+
 
 /* Spin button */
 .spin-button {
