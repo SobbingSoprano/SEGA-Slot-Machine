@@ -122,14 +122,38 @@ h1 {
 
 /* Inital Sprite Animation position */
 .overlay-sprite {
-  width: 35px;
-  height: 55px;               
+  width: 50px;                /* Increased width to prevent cutoff */
+  height: 65px;               /* Increased height to prevent cutoff */
   background-image: url("Assets/Images/tails-sprites.gif");
   background-repeat: no-repeat;
-  background-size: 3200%;  
-  background-position: -155px -12px;
+  background-size: 2400%;  
+  background-position: -445px -12px;
+  animation: Anim 1.8s infinite;
+  animation-timing-function: steps(1);  /* Remove steps(8) for manual control */
 }
-
+@keyframes Anim {
+  0% {
+      background-position: -445px -12px;  /* Frame 1 - customize this */
+  }
+  16.67% {
+      background-position: -520px -12px;  /* Frame 2 - customize this */
+  }
+  33.33% {
+      background-position: -575px -12px;  /* Frame 3 - customize this */
+  }
+  50% {
+      background-position: -625px -12px;  /* Frame 4 - customize this */
+  }
+  66.67% {
+      background-position: -694px -12px;  /* Frame 5 - customize this */
+  }
+  83.33% {
+      background-position: -745px -12px;  /* Frame 6 - customize this */
+  }
+  100% {
+      background-position: -795px -12px;
+  }
+}
 /* Spin button */
 .spin-button {
   margin-top: 40px;
