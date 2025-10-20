@@ -59,7 +59,7 @@ h1 {
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   background-position: -1px -10px;
-  animation: spinReel 1.5s linear infinite;
+  animation: spinReel 1.5s linear 1s;
 }
 
 .sonic1 { background-position: -100px -180px; animation-delay: 0s;}          /* 1st frame */
@@ -69,8 +69,8 @@ h1 {
 /* The reel container (the slot area) */
 .reel-container {
   position: absolute;
-  top: 39.10%;                  /* move up/down — tweak until aligned with the machine window */
-  left: 49.44%;                 /* center horizontally */
+  top: 44%;                  /* move up/down — tweak until aligned with the machine window */
+  left: 49.60%;                 /* center horizontally */
   transform: translate(-50%, -50%);
   display: flex;
   gap: 5.8px;                 /* space between reels */
@@ -78,7 +78,7 @@ h1 {
 }
 
 /* Back link */
-a.back-link {
+a  {
   margin-top: 40px;
   text-decoration: none;
   color: white;
@@ -86,30 +86,7 @@ a.back-link {
   transition: color 0.3s;
 }
 
-a.back-link:hover {
+a:hover {
   color: gold;
 }
 
-
-/* Optional: temporary outline for testing — delete once aligned */
-.spin-lever.test {
-  background: rgba(255, 0, 0, 0.3);
-  outline: 2px dashed red;
-}
-
-/* 2️⃣ Reels start paused (static) */
-.reel {
-  animation: spinReel 1.5s linear infinite;
-  animation-play-state: paused; /* default state */
-}
-
-/* 3️⃣ When lever (checkbox) is checked → start spinning */
-#lever-toggle:checked ~ .reel-container .reel {
-  animation-play-state: running;
-}
-
-/* 4️⃣ Lever visual "pull" feedback when activated */
-#lever-toggle:checked + .spin-lever {
-  transform: translateY(5px);
-  filter: brightness(1.4);
-}
