@@ -12,10 +12,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@300..700&family=Monoton&family=Orbitron:wght@400..900&family=Pacifico&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="audio-container">
-            <audio id="music" controls loop>
-                <source src='Assets/Sounds/Amy_Theme.wav' type='audio/wav'>
-            </audio>
-            </div>
-    </body>
+    <h1>Amy’s Slot Machine</h1>
+
+    <div class="slot-wrapper">
+      <img src="Assets/Images/slotmachine_base.png" class="slot-frame" alt="Slot machine frame">
+
+      <div class="reel-container">
+        <div class="reel amy1"></div>
+        <div class="reel amy2"></div>
+        <div class="reel amy3"></div>
+      </div>
+    </div>
+
+    <button class="spin-button">PULL LEVER</button>
+    <a href="Homepage.html" class="back-link">← Back to Main Menu</a>
+
+    <div id="audio-container">
+      <audio id="music" controls loop>
+        <source src="Assets/Sounds/Amy_Theme.wav" type="audio/wav">
+      </audio>
+    </div>
+  </body>
 </html>
