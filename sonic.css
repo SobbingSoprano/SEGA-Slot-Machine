@@ -69,8 +69,8 @@ h1 {
 /* The reel container (the slot area) */
 .reel-container {
   position: absolute;
-  top: 44%;                  /* move up/down — tweak until aligned with the machine window */
-  left: 49.60%;                 /* center horizontally */
+  top: 49.5%;                  /* move up/down — tweak until aligned with the machine window */
+  left: 49.70%;                 /* center horizontally */
   transform: translate(-50%, -50%);
   display: flex;
   gap: 5.8px;                 /* space between reels */
