@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Audiowide', sans-serif;
+  background-image: url("Assets/Images/tails_background.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main title */
+h1 {
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 10px rgb(252, 188, 69);;
+  margin-bottom: 40px;
+  font-family: 'Comfortaa';
+}
+.slot-frame, .slot-bg {
+  width: 350px;
+  height: 450px;
+}
+/* Slot machine container */
+.slot-machine {
+  background-image: url("Assets/Images/slotmachine_base.png");  
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(14, 14, 199, 0.6);
+  position: relative;  /* This makes it the positioning context */
+}
+#tails-decal-1 {
+    position: absolute;
+    top: 61.5%;          /* Position relative to slot-machine container */
+    left: 52%;         /* Position relative to slot-machine container */
+    z-index: 2;
+    pointer-events: none;
+}
+#tails-decal-2 {
+    position: absolute;
+    top: 61.5%;          /* Position relative to slot-machine container */
+    left: 44%;         /* Position relative to slot-machine container */
+    z-index: 2;
+    pointer-events: none;
+}
+#tails-decal-3 {
+    position: absolute;
+    top: 60.5%;          /* Position relative to slot-machine container */
+    left: 46.9%;         /* Position relative to slot-machine container */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Slot “reels” */
+.reel {
+  width: 29px;
+  height: 50px;
+  background-image: url("Assets/Images/tails-sprites.gif");
+  background-repeat: no-repeat;
+  background-size: 1000px 500px;
+  background-color: rgba(225, 225, 225, 0.5);
+  border: 5px solid rgb(252, 188, 69);;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background-position: -1000px -10px;
+}
+#reel1 {
+    background-image: url("Assets/Images/tails-sprites.gif");
+    background-repeat: no-repeat;
+    background-size: 2400%;
+    background-position: -10px -1px;
+}
+#reel2 {
+    background-image: url("Assets/Images/tails-sprites.gif");
+    background-repeat: no-repeat;
+    background-size: 2400%;
+    background-position: -27px -290px;
+}
+#reel3 {
+    background-image: url("Assets/Images/tails-sprites.gif");
+    background-repeat: no-repeat;
+    background-size: 2400%;
+    background-position: -5px -425px;
+}
+
+.tails1 { background-position: 0 0; }          /* 1st frame */
+.tails2 { background-position: -100px 0; }     /* 2nd frame */
+.tails3 { background-position: -200px 0; }     /* 3rd frame */
+
+/* The reel container (the slot area) */
+.reel-container {
+  position: absolute;
+  top: 49.10%;                  /* move up/down — tweak until aligned with the machine window */
+  left: 49.44%;                 /* center horizontally */
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5.8px;                 /* space between reels */
+  z-index: 0;                /* under the machine frame if needed */
+}
+
+/* Overlay container (on top of reels) */
+.overlay-container {
+  position: absolute;
+  top: 35.5%;                  /* same position as reel container */
+  left: 49.44%;                 /* same position as reel container */
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 5.8px;                 /* same gap as reels */
+  z-index: 10;               /* above the reels */
+}
+
+/* Inital Sprite Animation position */
+.overlay-sprite {
+  width: 35px;
+  height: 55px;               
+  background-image: url("Assets/Images/tails-sprites.gif");
+  background-repeat: no-repeat;
+  background-size: 3200%;  
+  background-position: -155px -12px;
+}
+
+/* Spin button */
+.spin-button {
+  margin-top: 40px;
+  background-color: rgb(252, 188, 69);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.spin-button:hover {
+  background-color: white;
+  color: rgb(252, 188, 69);;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px white;
+}
+
+/* Back link */
+a.back-link {
+  margin-top: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a.back-link:hover {
+  color: gold;
+}
