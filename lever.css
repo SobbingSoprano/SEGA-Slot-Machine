@@ -1,0 +1,33 @@
+/* lever.css */
+/* ===========================
+   🎰 Lever Control (CSS Only)
+   =========================== */
+
+/* Clickable area over the lever handle */
+.spin-lever {
+  position: absolute;
+  top: 39.7%;
+  left: 58%;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.2s ease;
+}
+
+/* Optional debug overlay (for alignment testing) */
+.spin-lever.test {
+  background: rgba(255, 0, 0, 0.3);
+  outline: 2px dashed red;
+}
+
+/* Pause reels by default */
+.reel {
+  animation-play-state: paused;
+}
+
+/* When lever toggled → start reels */
+#lever-toggle:checked ~ .reel-container .reel {
+  animation-play-state: running;
+}
