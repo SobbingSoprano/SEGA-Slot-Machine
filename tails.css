@@ -64,19 +64,19 @@ h1 {
     pointer-events: none;
 }
 @keyframes spinReel {
-  0%   { background-position: -10px -1px; filter:blur(5px); }
-  50% { background-position: -10px -200px; filter:blur(2.5px);} 
-  100%   { background-position: -10px -1px; filter:blur(0px);}/* moves image upward through frames */
+  0%   { background-position: -10px -1px;  }
+  50% { background-position: -10px -200px; } 
+  100%   { background-position: -10px -1px;}/* moves image upward through frames */
 }
 @keyframes spinReel2 {
-  0%   { background-position: -27px -290px; filter:blur(5px);}
-  50% { background-position: -27px -500px; filter:blur(2.5px);}
-  100% { background-position: -27px -290px; filter:blur(0px); }/* moves image upward through frames */
+  0%   { background-position: -27px -290px; }
+  50% { background-position: -27px -500px; }
+  100% { background-position: -27px -290px; }/* moves image upward through frames */
 }
 @keyframes spinReel3 {
-  0%   { background-position: -5px -425px; filter:blur(5px);}
-  50% { background-position: -5px -700px; filter:blur(2.5px); }
-  100%   { background-position: -5px -425px; filter:blur(0px);} /* moves image upward through frames */
+  0%   { background-position: -5px -425px; }
+  50% { background-position: -5px -700px; }
+  100%   { background-position: -5px -425px; } /* moves image upward through frames */
 }
 
 /* Slot “reels” */
