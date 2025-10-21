@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Amy</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@300..700&family=Monoton&family=Orbitron:wght@400..900&family=Pacifico&display=swap" rel="stylesheet">
-    </head>
-    <body>
-    <h1>Amy’s Slot Machine</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="stylesheet" href="amy.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@300..700&family=Orbitron:wght@400..900&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1><a href="Homepage.html">Amy’s Slot Machine</a></h1>
 
     <div class="slot-wrapper">
+      <!-- Slot machine frame -->
       <img src="Assets/Images/slotmachine_base.png" class="slot-frame" alt="Slot machine frame">
 
+      <!-- lever (hidden) -->
+      <input type="checkbox" id="lever-toggle" hidden>
+      <label for="lever-toggle" class="spin-lever"></label>
+
+      <!-- Reels -->
       <div class="reel-container">
         <div class="reel amy1"></div>
         <div class="reel amy2"></div>
         <div class="reel amy3"></div>
       </div>
+
+      <!-- Overlay Sprites -->
+      <div class="overlay-container">
+        <div class="overlay-sprite amy-sprite1"></div>
+        <div class="overlay-sprite amy-sprite2"></div>
+      </div>
+
+      <!-- Amy decals -->
+       <img id="amy-decal-1" src="Assets/Images/amy.PNG" height="50px">
+       <img id="amy-decal-2" src="Assets/Images/amy(2).PNG" height="50px">
+      <img id="amy-decal-3" src="Assets/Images/amy(3).PNG" height="50px">
+      <img id="amy-decal-4" src="Assets/Images/amy(4).PNG" height="60px">
+      <img id="amy-decal-5" src="Assets/Images/amy(5).PNG" height="70px">
     </div>
 
-    <button class="spin-button">PULL LEVER</button>
-    <a href="Homepage.html" class="back-link">← Back to Main Menu</a>
-
+    <!-- Audio -->
     <div id="audio-container">
       <audio id="music" controls loop>
         <source src="Assets/Sounds/Amy_Theme.wav" type="audio/wav">
