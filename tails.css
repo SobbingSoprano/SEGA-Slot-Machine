@@ -37,6 +37,11 @@ h1 {
   box-shadow: 0 0 20px rgba(14, 14, 199, 0.6);
   position: relative;  /* This makes it the positioning context */
 }
+#audio-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
 #tails-decal-1 {
     position: absolute;
     top: 61.5%;          /* Position relative to slot-machine container */
@@ -57,6 +62,21 @@ h1 {
     left: 46.9%;         /* Position relative to slot-machine container */
     z-index: 2;
     pointer-events: none;
+}
+@keyframes spinReel {
+  0%   { background-position: -10px -1px; filter:blur(5px); }
+  50% { background-position: -10px -200px; filter:blur(2.5px);} 
+  100%   { background-position: -10px -1px; filter:blur(0px);}/* moves image upward through frames */
+}
+@keyframes spinReel2 {
+  0%   { background-position: -27px -290px; filter:blur(5px);}
+  50% { background-position: -27px -500px; filter:blur(2.5px);}
+  100% { background-position: -27px -290px; filter:blur(0px); }/* moves image upward through frames */
+}
+@keyframes spinReel3 {
+  0%   { background-position: -5px -425px; filter:blur(5px);}
+  50% { background-position: -5px -700px; filter:blur(2.5px); }
+  100%   { background-position: -5px -425px; filter:blur(0px);} /* moves image upward through frames */
 }
 
 /* Slot “reels” */
@@ -106,7 +126,7 @@ h1 {
   transform: translate(-50%, -50%);
   display: flex;
   gap: 5.8px;                 /* space between reels */
-  z-index: 0;                /* under the machine frame if needed */
+  z-index: 0;               /* under the machine frame if needed */
 }
 
 /* Overlay container (on top of reels) */
@@ -154,36 +174,15 @@ h1 {
       background-position: -795px -12px;
   }
 }
-/* Spin button */
-.spin-button {
-  margin-top: 40px;
-  background-color: rgb(252, 188, 69);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 30px;
-  font-size: 18px;
-  font-family: 'Orbitron', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.spin-button:hover {
-  background-color: white;
-  color: rgb(252, 188, 69);;
-  transform: scale(1.1);
-  box-shadow: 0 0 15px white;
-}
 
 /* Back link */
-a.back-link {
-  margin-top: 40px;
+a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-a.back-link:hover {
+a:hover {
   color: gold;
 }

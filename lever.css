@@ -7,9 +7,9 @@
 .spin-lever {
   position: absolute;
   top: 39.7%;
-  left: 58%;
-  width: 12px;
-  height: 12px;
+  left: 56%;
+  width: 42px;
+  height: 62px;
   background: transparent;
   cursor: pointer;
   z-index: 5;
@@ -27,7 +27,28 @@
   animation-play-state: paused;
 }
 
+#reel1 {
+    animation-play-state: paused;
+}
+#reel2{
+    animation-play-state: paused;
+}
+#reel3 {
+  animation-play-state: paused;
+}
 /* When lever toggled → start reels */
 #lever-toggle:checked ~ .reel-container .reel {
   animation-play-state: running;
+}
+#lever-toggle:checked ~ .reel-container #reel1 {
+    animation-play-state: running;
+    animation: spinReel 3s linear;
+}
+#lever-toggle:checked ~ .reel-container #reel2 {
+    animation-play-state: running;
+    animation: spinReel2 3s linear 1s;
+}
+#lever-toggle:checked ~ .reel-container #reel3 {
+    animation-play-state: running;
+    animation: spinReel3 3s linear 2s;
 }

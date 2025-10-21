@@ -7,12 +7,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="tails.css">
+        <link rel="stylesheet" href="lever.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@300..700&family=Monoton&family=Orbitron:wght@400..900&family=Pacifico&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Tail's Slot Machine</h1>
+        <h1><a href = 'Homepage.html'>Tails's Slot Machine</a></h1>
 
         <div class="slot-wrapper">
             <!-- Foreground layer: transparent PNG frame -->
@@ -22,6 +23,11 @@
             <div class="overlay-container">
                 <div class="overlay-sprite"></div>
             </div>
+            <!-- Hidden toggle input controls the reel animation -->
+      <input type="checkbox" id="lever-toggle" hidden>
+
+      <!-- Clickable lever area (invisible, overlaid on frame) -->
+      <label for="lever-toggle" class="spin-lever"></label>
             
             <!-- Reel section goes in the middle -->
             <div class="reel-container">
@@ -30,9 +36,10 @@
             <div id = 'reel3' class= "reel tails3" ></div>
             </div>
             <img id='tails-decal-3' src="Assets/Images/tails(5).PNG" height='70px'>
-            <img id='tails-decal-2' src="Assets/Images/tails(2).PNG" height='50px'>
+            <img id='tails-decal-2' src="Assets/Images/tails.PNG" height='50px'>
             <img id='tails-decal-1' src="Assets/Images/tails(4).PNG" height='50px'>
         </div>
+    
         <!-- contains audio player for tails -->
         <div id="audio-container">
             <audio id="music" controls loop>
