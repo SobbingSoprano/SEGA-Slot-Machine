@@ -39,8 +39,8 @@ h1 {
 }
 
 @keyframes spinReel {
-  0%   { background-position-y: 0; }
-  100% { background-position-y: -500px; } /* moves image upward through frames */
+  0%   { background-position-y: -190; }
+  100% { background-position-y: -400px; } /* moves image upward through frames */
 }
 
 
@@ -58,13 +58,12 @@ h1 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  background-position: -1px -10px;
   animation: spinReel 1.5s linear 1s;
 }
 
-.sonic1 { background-position: -100px -180px; animation-delay: 0s;}          /* 1st frame */
-.sonic2 { background-position: -100px -180px; animation-delay: 0s;}     /* 2nd frame */
-.sonic3 { background-position: -100px -180px; animation-delay: 0s;}     /* 3rd frame */
+.sonic1 { background-position: -100px -190px; animation-delay: 0s;}          /* 1st frame */
+.sonic2 { background-position: -100px -190px; animation-delay: 2.5s;}     /* 2nd frame */
+.sonic3 { background-position: -100px -190px; animation-delay: 4s;}     /* 3rd frame */
 
 /* The reel container (the slot area) */
 .reel-container {
