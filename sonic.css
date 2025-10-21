@@ -76,6 +76,46 @@ h1 {
   z-index: 0;                /* under the machine frame if needed */
 }
 
+
+/* 🌀 Animated Sonic Sprite Overlay */
+.overlay-container {
+  position: absolute;
+  top: 29%;              /* same top as before */
+  left: 50%;             /* center horizontally */
+  transform: translateX(-50%); /* keep centered */
+  width: 350px;          /* match your slot frame width */
+  height: 110px;         /* same height you had */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;           /* above reels, below frame */
+  pointer-events: none;  /* clicks pass through */
+  /* border: 2px dashed red; */ /* test visibility */
+}
+
+
+.overlay-sprite {
+  width: 51px;          /* adjust to fit Sonic’s sprite width */
+  height: 65px;         /* adjust to fit Sonic’s sprite height */
+  background-image: url("Assets/Images/sonic-sprites.gif");
+  background-repeat: no-repeat;
+  background-size: 2400%;  
+  background-position: -445px -12px;
+  animation: SonicAnim 1.8s infinite;
+  animation-timing-function: steps(1);
+}
+
+/* 🔄 Sonic animation keyframes */
+@keyframes SonicAnim {
+  0%   { background-position: -445px -12px; }
+  16%  { background-position: -520px -12px; }
+  33%  { background-position: -575px -12px; }
+  50%  { background-position: -625px -12px; }
+  66%  { background-position: -694px -12px; }
+  83%  { background-position: -745px -12px; }
+  100% { background-position: -795px -12px; }
+}
+
 /* Back link */
 a  {
   margin-top: 40px;
@@ -89,3 +129,27 @@ a:hover {
   color: gold;
 }
 
+/* 🌀 Sonic Decals (bottom of slot machine) */
+#sonic-decal-2 {
+  position: absolute;
+  top: 62%;
+  left: 43%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#sonic-decal-4 {
+  position: absolute;
+  top: 62%;
+  left: 47%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#sonic-decal-5 {
+  position: absolute;
+  top: 61%;
+  left: 51.5%;
+  z-index: 2;
+  pointer-events: none;
+}
