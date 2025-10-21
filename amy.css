@@ -14,7 +14,7 @@ body {
   justify-content: center;
 }
 
-/* h1 */
+/* Title */
 h1 {
   color: white;
   font-size: 40px;
@@ -26,11 +26,9 @@ h1 a {
   color: inherit;
   text-decoration: none;
 }
-h1 a:hover {
-  color: #ffd1e8;
-}
+h1 a:hover { color: #ffd1e8; }
 
-/*  Slot wrapper */
+/* Slot wrapper */
 .slot-wrapper {
   position: relative;
   display: inline-block;
@@ -41,30 +39,29 @@ h1 a:hover {
   z-index: 1;
 }
 
-/*  Lever  */
+/* Lever */
 .spin-lever {
   position: absolute;
-  right: -14px;
-  top: 150px;
-  width: 44px;
-  height: 90px;
+  right: -.8px;
+  top: 100px;
+  width: 80px;
+  height: 100px;
   cursor: pointer;
-  z-index: 2;
-  transition: transform 0.1s;
+  z-index: 10;
 }
 .spin-lever:active { transform: rotate(8deg) scale(0.95); }
 
-/*  Reels  */
+
+/* Reels */
 .reel-container {
   position: absolute;
-  top: 43.4%;
+  top: 43.6%;
   left: 48.9%;
   transform: translate(-50%, -50%);
   display: flex;
   gap: 6px;
   z-index: 0;
 }
-
 .reel {
   width: 29px;
   height: 50px;
@@ -77,26 +74,38 @@ h1 a:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* frames */
-.reel.amy1 { background-position-x: -400px; }
-.reel.amy2 { background-position-x: -120px; }
-.reel.amy3 { background-position-x: -230px; }
+/* Frames */
+#reel1 { background-position: -10px -1px; }
+#reel2 { background-position: -27px -290px; }
+#reel3 { background-position: -5px -425px; }
 
-/* Spin animation */
-@keyframes spinReelX {
-  0%   { background-position-x: 0; }
-  100% { background-position-x: -800px; }
+/*  spin animation */
+@keyframes spinReel {
+  0%   { background-position-y: 0; }
+  50%  { background-position-y: -500px; }
+  100% { background-position-y: 0; }
 }
 
-/* Checkbox trigger */
-#lever-toggle:checked ~ .reel-container .reel {
-  animation: spinReelX 1.5s steps(6) 1;
+/* Trigger lever spin */
+#lever-toggle:checked ~ .reel-container #reel1 {
+  animation: spinReel 1.8s linear;
 }
-#lever-toggle:checked ~ .reel-container .reel.amy1 { animation-delay: 0s; }
-#lever-toggle:checked ~ .reel-container .reel.amy2 { animation-delay: 0.15s; }
-#lever-toggle:checked ~ .reel-container .reel.amy3 { animation-delay: 0.3s; }
+#lever-toggle:checked ~ .reel-container #reel2 {
+  animation: spinReel 1.8s linear 0.2s;
+}
+#lever-toggle:checked ~ .reel-container #reel3 {
+  animation: spinReel 1.8s linear 0.4s;
+}
 
-/* Overlay sprites */
+/* Allow retrigger */
+#lever-toggle:checked {
+  animation: resetLever 0.1s forwards;
+}
+@keyframes resetLever {
+  to { transform: rotate(0deg); }
+}
+
+/* Overlay animations */
 .overlay-container {
   position: absolute;
   top: 22%;
@@ -106,7 +115,6 @@ h1 a:hover {
   gap: 6px;
   z-index: 10;
 }
-
 .overlay-sprite {
   width: 35px;
   height: 50px;
@@ -114,59 +122,28 @@ h1 a:hover {
   background-size: 3200%;
   animation: amyOverlaySpin 2.2s steps(6) infinite;
 }
-
 .amy-sprite1 {
   background-image: url("Assets/Images/amy-sprites.gif");
   background-position: -155px -12px;
-  animation-delay: 1s;
 }
 .amy-sprite2 {
   background-image: url("Assets/Images/amy-sprites2.gif");
   background-position: -155px -12px;
+  animation-delay: 1s;
 }
-
 @keyframes amyOverlaySpin {
   0% { background-position-x: 0; }
   100% { background-position-x: -900px; }
 }
 
-/* Decal placements  */
-#amy-decal-1 {
-  position: absolute;
-  top: 62.5%;
-  left: 30%;
-  z-index: 2;
-  pointer-events: none;
-}
-#amy-decal-2 {
-  position: absolute;
-  top: 62.5%;
-  left: 57%;
-  z-index: 2;
-  pointer-events: none;
-}
-#amy-decal-3 {
-  position: absolute;
-  top: 62.5%;
-  left: 23%;
-  z-index: 2;
-  pointer-events: none;
-}
-#amy-decal-4 {
-  position: absolute;
-  top: 60.5%;
-  left: 39.5%;
-  z-index: 2;
-  pointer-events: none;
-}
-#amy-decal-5 {
-  position: absolute;
-  top: 60.5%;
-  left: 55%;
-  z-index: 2;
-  pointer-events: none;
-}
-/*  Audio  */
+/* Decals */
+#amy-decal-1 { position: absolute; top: 62.5%; left: 30%; pointer-events: none; }
+#amy-decal-2 { position: absolute; top: 62.5%; left: 57%; pointer-events: none; }
+#amy-decal-3 { position: absolute; top: 62.5%; left: 23%; pointer-events: none; }
+#amy-decal-4 { position: absolute; top: 60.5%; left: 39.5%; pointer-events: none; }
+#amy-decal-5 { position: absolute; top: 60.5%; left: 55%; pointer-events: none; }
+
+/* Audio */
 #audio-container {
   margin-top: 20px;
 }
